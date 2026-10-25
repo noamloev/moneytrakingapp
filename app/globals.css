@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #f5f7f3; }
+body { margin: 0; background: #f5f7f3; color: #162321; font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+button, input, select { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+.app-bg { background: radial-gradient(circle at 5% 0%, rgba(216,243,227,.62), transparent 28rem), #f5f7f3; }
+.theme-dark { color-scheme: dark; background: #15201d; }
+.theme-dark .app-bg, .theme-dark .app-bg { background: #15201d; }
+.theme-dark .text-ink, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark p, .theme-dark span { }
+.theme-dark .bg-white { background: #20302a; }
+.theme-dark .bottom-nav { background: rgba(27, 42, 36, .92); border-color: rgba(255,255,255,.08); }
+.theme-dark .text-ink { color: #eef8f1; }
+.theme-dark .shadow-soft { box-shadow: 0 12px 36px rgba(0,0,0,.18); }
+.field-label { display: block; color: #72847c; font-size: .75rem; font-weight: 800; letter-spacing: .02em; }
+.field-input { display: block; width: 100%; margin-top: .45rem; height: 3.1rem; border: 1px solid rgba(22,35,33,.08); border-radius: 1rem; background: #f7f9f6; padding: 0 .9rem; color: #162321; outline: none; }
+.field-input:focus { border-color: #a8dcbc; box-shadow: 0 0 0 4px rgba(216,243,227,.8); }
+.profile-action { display: flex; width: 100%; align-items: center; gap: .8rem; border-radius: 1rem; padding: .7rem; text-align: left; transition: background .2s; }
+.profile-action:hover { background: #f7f9f6; }
+.profile-action > span:nth-child(2) { min-width: 0; flex: 1; }
+.profile-action strong, .profile-action small { display: block; }
+.profile-action strong { font-size: .875rem; color: #162321; }
+.profile-action small { margin-top: .15rem; font-size: .72rem; color: #91a199; }
+.icon-tile { display: grid; height: 2.5rem; width: 2.5rem; flex-shrink: 0; place-items: center; border-radius: .85rem; color: #2b7457; }
+.bottom-nav { padding-bottom: max(10px, env(safe-area-inset-bottom)); }
+.sheet { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+@media (min-width: 640px) { .app-bg { min-height: 100vh; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
