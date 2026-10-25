@@ -26,9 +26,12 @@ Deploy the generated `out/` directory to any HTTPS static host such as GitHub Pa
 1. Push this folder to a GitHub repository.
 2. Go to [vercel.com](https://vercel.com), sign in, and choose `Add New Project`.
 3. Import the repository.
-4. Keep the detected Next.js settings. The build command is `npm run build`; the output is the generated static `out/` folder.
-5. Choose the free Hobby plan and click `Deploy`.
-6. Open the provided HTTPS URL and send it to the tester.
+4. Set `Framework Preset` to `Other` because this project is a static export.
+5. Set `Build Command` to `npm run build`.
+6. Set `Output Directory` to `out`.
+7. Leave the Install Command as the detected `npm install`.
+8. Choose the free Hobby plan and click `Deploy`.
+9. Open the provided HTTPS URL and send it to the tester.
 
 Vercel will automatically redeploy when new commits are pushed. The app does not require environment variables, a database, or paid services.
 
